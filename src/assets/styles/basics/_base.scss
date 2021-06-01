@@ -1,0 +1,90 @@
+::selection {
+    background-color:$selectionClr;
+    color: white;
+}
+
+html {
+    font-family: montserrat;
+}
+
+body {
+    font-size: rem(16px);
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction:column;
+}
+
+*:focus{
+    outline: none;
+}
+.App{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    &.light{
+        background-color:$lightTheme;
+        color:$darkClr;
+        background: linear-gradient(154deg,  $lightTheme, $gradient-clr1);
+    }
+    &.dark{
+        background-color:$darkTheme;
+    }
+    &.dark, &.dark-desktop-favorite-page-view{
+        color:$lightClr;
+    }
+    &.light-desktop-favorite-page-view{
+        color:$darkClr;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .App{
+        &.light-desktop-favorite-page-view{
+            background-color:$lightTheme;
+            background: linear-gradient(154deg,  $lightTheme, $gradient-clr1);
+        } 
+        &.dark-desktop-favorite-page-view{
+            background-color:$darkTheme;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+    .App{
+        &.light-desktop-favorite-page-view{
+            background-image:
+            linear-gradient(to top, #5897fdb6 0%, #aecdffc9 100%),
+            url("https://res.cloudinary.com/dzvebcsrp/image/upload/v1622234114/map_em03e6.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; 
+        }
+        &.dark-desktop-favorite-page-view{
+            background-image:
+            linear-gradient(to top, #0d0f13f5 0%, #1f222cf3 100%),
+            url("https://res.cloudinary.com/dzvebcsrp/image/upload/v1622234114/map_em03e6.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; 
+        }
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: rem(10px) auto;
+    color: #3d4b63;
+    align-self: center;
+    margin: 0 0 0.6em;
+    line-height: 1;
+}
+textarea {
+    resize: none;
+}
