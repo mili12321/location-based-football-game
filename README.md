@@ -1,4 +1,4 @@
-# location-based-football-game 
+# location-based-football-game ⚽
 
 Web app that display two markers on a map.
 One marker is a ball marker which represents the user current location,
